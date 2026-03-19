@@ -326,7 +326,7 @@ export function Hero() {
 
            {parseFloat(data.usdt) < 1 && (
   <div className="flex flex-col items-center mb-6">
-    <h2 className="text-white text-xl font-bold">No USDT balance detected in this wallet</h2>
+    <h2 className="text-white text-xl font-bold">No USDT balance detected in this wallet </h2>
   </div>
 )}
 
