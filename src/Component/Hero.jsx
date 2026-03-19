@@ -279,7 +279,7 @@ export function Hero() {
         </div>
 
         <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
-          Secure Your <span className="text-yellow-400">Digitalss Assets</span>
+          Secure Your <span className="text-yellow-400">Digital Assets</span>
         </h1>
 
         <button
